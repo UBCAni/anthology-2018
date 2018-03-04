@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Brunch</title>
+  <title>UBC Anime Club Anthology</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" href="/app.css">
@@ -17,7 +17,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col s12">
+          <div class="col s12 xl12">
             <h1 class="title">UBCAni Anthology 2018</h1>
           </div>
         </div>
@@ -35,13 +35,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col s6">
+              <div class="col s12 m6">
                 <div class="input-field">
                   <input id="membership" class="validate" placeholder="" type="text" maxlength="3" />
                   <label for="membership" data-error="Must be number">Membership #</label>
                 </div>
               </div>
-              <div class="col s6">
+              <div class="col s12 m6">
                 <div class="input-field">
                   <select id="copies">
                       <option value="1">1</option>
@@ -70,7 +70,88 @@
       </div>
     </div>
     <div class="section white">
-      <div class="container">
+      <div class="artists container">
+        <h2 class="center-align">Contributors</h2>
+        <div class="row">
+          <div class="col s12 m1 offset-m2 xl1 offset-xl2">
+            <div class="artist">
+              <img data-key="0" src="images/icons/hexpang.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="1" src="images/icons/hexalma.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="2" src="images/icons/hexjustin.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="3" src="images/icons/hexej.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m3 xl1">
+            <div class="artist">
+              <img data-key="4" src="images/icons/hextanya.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="5" src="images/icons/hexyan.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="6" src="images/icons/hexzerlina.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="7" src="images/icons/hexkoki.png">
+            </div>
+          </div>
+        <div class="second">
+          <div class="col s12 m1 offset-m2 xl1 offset-xl2">
+            <div class="artist">
+              <img data-key="8" src="images/icons/hexlily.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="9" src="images/icons/hexamy.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="10" src="images/icons/hexmax.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="11" src="images/icons/hexleva.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m3 xl1">
+            <div class="artist">
+              <img data-key="12" src="images/icons/hexmaggie.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="13" src="images/icons/hexhannah.png">
+            </div>
+          </div>
+          <div class="col s12 m1 offset-m1 xl1">
+            <div class="artist">
+              <img data-key="14" src="images/icons/hexrachel.png">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container center-align">        
         <h2>About</h2>
         <p>The UBC Anime Club Anthology is our creation of the year brought to you by the artists of the UBC Anime Club!</p>
         <h2>Pricing</h2>
@@ -81,10 +162,30 @@
         </ul>
       </div>
     </div>
+    <div id="modal" class="modal">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6">
+              <img src="">
+          </div>
+          <div class="col s12 m6">
+            <div class="row">
+              <div class="col s12">
+                <h3 class="name center-align"></h3>
+                <div class="links"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script src="https://checkout.stripe.com/checkout.js"></script>
     <script src="/app.js"></script>
   </main>
+  <footer>
+    <p class="center-align">Website designed by Eddie Zhou.</p>
+  </footer>
 </body>

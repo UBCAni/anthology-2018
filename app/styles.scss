@@ -1,11 +1,23 @@
-.title {
+.primary {
+    background-color: #82cafe;
+}
+
+html, body {
     color: #054568;
+    overflow-x: hidden;
+}
+
+.title {
     text-align: center;
 }
 
 .parallax-container {
-    height: 100vh;
+    height: 50rem;
     width: auto;
+
+    @media screen and (min-width: 1200px) {
+        height: 500px;
+    }
 
     .mascot {
         display: block;
@@ -29,16 +41,11 @@
 
 .identity {
     .input-field {
-        input[type=text]:focus + label {
-            color: #054568;
-        }
-        
         label {
             color:#589cc1;
         }
 
         input[type=text] {
-            color: #054568;
             border-bottom: 1px solid #589cc1;
             box-shadow: 0 1px 0 0 #589cc1;
         }
@@ -56,6 +63,131 @@
     }
 }
 
-#name:after {
-    content: " *";
+#name + label:before {
+    content: "* ";
+    color: red;
+}
+
+.artists {
+    .artist {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        img {
+            display: inline-block;
+            margin: 2rem auto;
+            width: 20rem;
+
+            @media screen and (min-width: 600px) {
+                margin: initial;
+                height: auto;
+                width: 12rem;
+            }
+        }
+    }
+
+    .artist:hover {
+        opacity: .4;
+        transition: opacity .2s ease-out;
+    }
+}
+
+.artists.container {
+    width: 100%;
+    max-width: 100%;
+
+    div.row {
+        position: relative;
+
+        div.col {
+            float: none;
+
+            @media screen and (min-width: 600px) {
+                float: left;
+            }
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        div.second {
+            display: block;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            left: 6rem;
+            top: -4rem;
+        }
+    }
+}
+
+.modal {
+    box-shadow: none;
+    background-color: initial;
+    pointer-events: none;
+
+    color: white;
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 20rem;
+        height: auto;
+
+        @media screen and (min-width: 600px) {
+            width: 15rem;
+        }
+    }
+
+    .name {
+        text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+        @media screen and (min-width: 600px) {
+            font-size: 2rem;
+        }
+    }
+    
+    .links {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .logo {
+        display: inline-block;
+    }
+
+    .logo::after {
+        display: block;
+        position: relative;
+        width: 64px;
+        height: 64px;
+        content: "";
+        margin: 0 1rem 0 0;
+        float: left;
+
+        pointer-events: all;
+    }
+
+    .logo.instagram::after {
+        background: url("images/social/instagram.png") no-repeat;
+    }
+
+    .logo.twitter::after {
+        opacity: 1;
+        background: url("images/social/twitter.png") no-repeat;
+    }
+
+    .logo.tumblr::after {
+        background: url("images/social/tumblr.png") no-repeat;
+    }
+
+    .logo.pixiv::after {
+        background: url("images/social/pixiv.png") no-repeat;
+    }
+
+    .logo.deviantart::after {
+        background: url("images/social/deviantart.png") no-repeat;
+    }
 }
