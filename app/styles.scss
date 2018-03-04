@@ -1,1 +1,61 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+.title {
+    color: #054568;
+    text-align: center;
+}
+
+.parallax-container {
+    height: 100vh;
+    width: auto;
+
+    .mascot {
+        display: block;
+        position: relative;
+        height: 10rem;
+        min-width: initial;
+        min-height: initial;
+        margin: 0 auto;
+    }
+}
+
+.parallax {
+    img {
+        z-index: -1;
+    }
+}
+
+.wrapper {
+    text-align: center;
+}
+
+.identity {
+    .input-field {
+        input[type=text]:focus + label {
+            color: #054568;
+        }
+        
+        label {
+            color:#589cc1;
+        }
+
+        input[type=text] {
+            color: #054568;
+            border-bottom: 1px solid #589cc1;
+            box-shadow: 0 1px 0 0 #589cc1;
+        }
+
+        input[type=text]:focus {
+            border-bottom: 1px solid #054568;
+            box-shadow: 0 1px 0 0 #054568;
+        }
+
+        ::placeholder {
+            opacity: 1;
+            color: #589cc1;
+            font-weight: 400;
+        }
+    }
+}
+
+#name:after {
+    content: " *";
+}

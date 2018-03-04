@@ -1,14 +1,90 @@
 <!DOCTYPE html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brunch</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" href="/app.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js" integrity="sha256-Nd2xznOkrE9HkrAMi4xWy/hXkQraXioBg9iYsBrcFrs=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  <div class="brunch">
-    <a href="http://brunch.io"><img src="http://brunch.io/images/logo.png" alt="Brunch"></a>
-    <p>Bon Appétit.</p>
-  </div>
+  <main>
+    <div class="parallax-container valign-wrapper">
+      <div class="parallax">
+        <img src="images/parallax.png">
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col s12">
+            <h1 class="title">UBCAni Anthology 2018</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s4">
+            <img class="mascot" src="images/shianiwalking.gif">
+          </div>
+          <div class="identity col s4">
+            <div class="row">
+              <div class="col s12">
+                <div class="input-field">
+                  <input id="name" class="validate" placeholder="" type="text" maxlength="64" required />
+                  <label for="name" data-error="Name is required">Full Name</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <div class="input-field">
+                  <input id="membership" class="validate" placeholder="" type="text" maxlength="3" />
+                  <label for="membership" data-error="Must be number">Membership #</label>
+                </div>
+              </div>
+              <div class="col s6">
+                <div class="input-field">
+                  <select id="copies">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                  </select>
+                  <label>Copies</label>
+                </div>
+              </div>
+            </div>
+            <div class="row wrapper">
+              <button id="purchase" class="waves-effect waves-light btn-large light-blue darken-3">Pay by Card</button>
+            </div>
+          </div>
+          <div class="col s4">
+            <img class="mascot" src="images/tanowalking.gif">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section white">
+      <div class="container">
+        <h2>About</h2>
+        <p>The UBC Anime Club Anthology is our creation of the year brought to you by the artists of the UBC Anime Club!</p>
+        <h2>Pricing</h2>
+        <p>The Anthology will be priced as follows:</p>
+        <ul>
+          <li>Members: $20.00</li>
+          <li>Non-Members: $25.00</li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script src="https://checkout.stripe.com/checkout.js"></script>
+    <script src="/app.js"></script>
+  </main>
 </body>

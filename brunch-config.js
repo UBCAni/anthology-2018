@@ -4,8 +4,12 @@ exports.files = {
     stylesheets: {joinTo: 'app.css'}
 };
 
+exports.modules = {
+    autoRequire: {
+        'app.js': ['main']
+    }
+};
+
 exports.plugins = {
     postcss: {}
-}
-
-
+};
