@@ -112,7 +112,7 @@ const logos = {
 $(function() {
     $("#modal").modal({
         outDuration: 100,
-        endingTop: "20%"
+        endingTop: $(document).width() > 600 ? "25%" : "10%"
     });
 
     $(".parallax").parallax();
