@@ -150,7 +150,7 @@ html, body {
         -1px 1px 0 #000,
         1px 1px 0 #000;
     }
-    
+
     .links {
         margin: 0 auto;
         text-align: center;
@@ -192,4 +192,12 @@ html, body {
     .logo.deviantart::after {
         background: url("images/social/deviantart.png") no-repeat;
     }
+}
+
+.completed {
+    color: #088b45;
+}
+
+.canceled {
+    color: #801D00;
 }

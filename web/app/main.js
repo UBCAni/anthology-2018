@@ -16,6 +16,19 @@ const handler = StripeCheckout.configure({
             },
             method: 'POST',
             credentials: 'same-origin'
+        }).then(function (status) {
+            const response = $('#response')[0];
+            if (!status.ok) {
+                response.innerText = 'Unknown error occurred';
+                response.className = 'center-align canceled';
+            } else {
+                response.innerText = 'Thank you for your purchase!';
+                response.className = 'center-align completed';
+            }
+        }).catch(function () {
+            const response = $('#response')[0];
+            response.innerText = 'Unknown error occurred';
+            response.className = 'center-align canceled';
         });
     }
 });

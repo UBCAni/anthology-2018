@@ -43,6 +43,8 @@ app.post('/', async (req, res) => {
         await request(options);
 
         console.log(`Submitted payment of ${results.amount} from ${email} to Google Forms`);
+
+        res.json({ message: 'success' });
     } catch (err) {
         console.log('An unexpected error occurred');
         console.log(err);
@@ -56,5 +58,5 @@ app.listen(3000, () => {
 });
 
 function calculateCharge(copies, membershipNum) {
-    return (membershipNum ? 2400 : 2000) * parseInt(copies);
+    return (membershipNum ? 2000 : 2400) * parseInt(copies);
 }
