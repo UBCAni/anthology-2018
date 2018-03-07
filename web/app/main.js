@@ -155,6 +155,8 @@ $(function() {
                 result += links.twitter ? logos.twitter(links.twitter) : '';
                 result += links.pixiv ? logos.pixiv(links.pixiv) : '';
                 result += links.deviantart ? logos.deviantart(links.deviantart) : '';
+            } else {
+                result += "No links available"
             }
 
             $("#modal img")[0].src = event.target.src;
