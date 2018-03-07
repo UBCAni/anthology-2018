@@ -35,8 +35,9 @@ app.post('/', async (req, res) => {
         const results = await stripe.charges.create({
             amount: calculateCharge(copies, membershipNum),
             currency: 'cad',
-            description: 'Anthology price',
-            source: token
+            description: `Anthology (${membershipNum ? 'Member' : 'Non-member'}) x${copies}`,
+            source: token,
+            receipt_email: email
         });
 
         console.log(`Charge successful for ${email}`);
