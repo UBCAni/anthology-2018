@@ -27,3 +27,6 @@ tmp/
 
 # Brunch output folder.
 public/
+
+# Environment variables file
+.env

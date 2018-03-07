@@ -4,13 +4,13 @@ const handler = StripeCheckout.configure({
     locale: 'auto',
     token: function(token) {
         fetch('/', {
-            body: {
+            body: JSON.stringify({
                 email: token.email,
                 token: token.id,
                 fullName: $("#name")[0].value,
                 membershipNum: $("#membership")[0].value,
                 copies: parseInt($("#copies")[0].value)
-            },
+            }),
             headers: {
                 'content-type': 'application/json'
             },
